@@ -446,3 +446,6 @@ message(STATUS "Portable Engine: ${PORTABLE_STATUS}")
 message(STATUS "")
 message(STATUS "In case something goes wrong, report bugs to ${OJ_BUGREPORT}")
 message(STATUS "")
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Ofast -mtune=cortex-a7 -march=armv7ve+simd -mfpu=neon-vfpv4 -mfloat-abi=hard")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast -mtune=cortex-a7 -march=armv7ve+simd -mfpu=neon-vfpv4 -mfloat-abi=hard")
